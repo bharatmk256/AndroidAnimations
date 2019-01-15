@@ -13,9 +13,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtHiWorld;
     private ImageView imgWolf;
     private ImageView imgComedy;
+    private TextView txtAndroid;
 
-    boolean isHelloWorldShowing;
-    boolean isWolfShowing;
+    boolean isHelloWorldShowing = true;
+    boolean isWolfShowing = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         txtHiWorld = (TextView) findViewById(R.id.hiWorld);
         imgComedy = (ImageView) findViewById(R.id.comedy);
         imgWolf = (ImageView) findViewById(R.id.wolf);
+        txtAndroid = (TextView)findViewById(R.id.txtAndroid);
 
 
         txtHelloWorld.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
                     imgComedy.animate().alpha(0).setDuration(1000);
                     isWolfShowing = true;
                 }
+            }
+        });
+
+        txtAndroid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                txtAndroid.animate().translationX(-3000).setDuration(2000);
+
             }
         });
 
