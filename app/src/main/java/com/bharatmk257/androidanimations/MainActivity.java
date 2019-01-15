@@ -30,9 +30,17 @@ public class MainActivity extends AppCompatActivity {
         txtAndroid = (TextView)findViewById(R.id.txtAndroid);
 
 
+        txtHelloWorld.setX(2000);
+        txtHiWorld.setX(-2000);
+        txtAndroid.setY(-3000);
+
+
+
         txtHelloWorld.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 //                Toast.makeText(MainActivity.this,"Hello World",Toast.LENGTH_LONG).show();
 
 //                txtHelloWorld.animate().scaleY(90f).setDuration(1000);
@@ -65,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
                     imgComedy.animate().alpha(0).setDuration(1000);
                     isWolfShowing = true;
                 }
+
+                txtHelloWorld.animate().translationXBy(-2000).setDuration(2000);
+//                txtHiWorld.animate().translationXBy(2000).setDuration(2000);
+                txtAndroid.animate().translationYBy(3000).setDuration(2000);
+
             }
         });
 
@@ -72,8 +85,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                txtAndroid.animate().translationX(-3000).setDuration(2000);
+//                txtAndroid.animate().translationX(-3000).setDuration(2000);
+//                txtAndroid.animate().translationY(-3000).setDuration(3000);
 
+//                txtAndroid.animate().translationXBy(200).setDuration(5000);
+//                txtAndroid.animate().rotation(360).setDuration(3000);
+
+//                txtAndroid.animate().rotationBy(-90).setDuration(4000);
+
+//                txtAndroid.animate().rotationX(400).translationY(2000).setDuration(3000);
+
+                txtAndroid.animate().scaleX(0.2f).scaleY(0.4f).setDuration(3000);
             }
         });
 
